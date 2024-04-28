@@ -24,7 +24,10 @@
             let amount = Number(document.getElementById('amount').value) * 1000000000
             let recipient = document.getElementById('recipient').value
 
-            const network = "https://api.mainnet-beta.solana.com";
+            let mainnet = "https://api.tatum.io/v3/blockchain/node/solana-mainnet"
+            let devnet = "https://api.devnet.solana.com"
+
+            const network = mainnet;
             const connection = new solanaWeb3.Connection(network);
             const transaction = new solanaWeb3.Transaction();
 
